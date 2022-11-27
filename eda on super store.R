@@ -27,25 +27,33 @@ summary(df)
 #Each Data Representation According To Each Category 
 table(df$Ship.Mode)
 ggplot(data=df,aes(x=Ship.Mode,fill=Sales))+geom_bar(width=0.5)
+#After looking the graph we can say that Maximum Sales is done in Standard Class Ship mode
+#And the Minimum Sales is done ship mode is Same Day
 
 table(df$Segment)
 ggplot(data=df,aes(x=Segment,fill=Sales))+geom_bar(width = 0.5)
+#This graph says that sales is maximum for Individual Consumer and minimum  sales is done by Home Office
 
 table(df$Region)
 ggplot(data=df,aes(x=Region,fill=Sales))+geom_bar(width = 0.5)
+#As we can see that maximum no.of Sales is done in West Region and Minimum done in South
 
 table(df$Category)
 ggplot(data=df,aes(x=Category,fill=Sales))+geom_bar(width = 0.5)
+#This represent of sales Office Supplies has maximum of sales and Technology has minimum of Sales
 
 #State-wise Sales Analysis
 ggplot(df,aes(x=State,y=Sales,fill=State))+geom_col()+ggtitle("Statewise Analysis of Sales")+
   coord_flip()+theme(legend.position = "None",axis.text.y = element_text(size = 6))
+#This Graph says that maximum no.of sales done in California
 
 #Graphical Representation of Profit on each Sub-Category Of The Products
-ggplot() + geom_point(data = df, aes(x = Sales, y = Profit, color =Sub.Category)) 
+ggplot() + geom_point(data = df, aes(x = Sales, y = Profit, color =Sub.Category))
+
 
 #Graphical Representation Of Discount on Sales in Shipment Mode
 ggplot() + geom_point(data = df, aes(x = Discount, y = Sales, color = Ship.Mode))
+
 
 
 
