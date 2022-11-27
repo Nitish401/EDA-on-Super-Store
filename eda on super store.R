@@ -49,16 +49,4 @@ ggplot(df,aes(x=State,y=Sales,fill=State))+geom_col()+ggtitle("Statewise Analysi
 
 #Graphical Representation of Profit on each Sub-Category Of The Products
 ggplot() + geom_point(data = df, aes(x = Sales, y = Profit, color =Sub.Category))
-
-
-#Graphical Representation Of Discount on Sales in Shipment Mode
-ggplot() + geom_point(data = df, aes(x = Discount, y = Sales, color = Ship.Mode))
-
-
-
-
-
-
-
-
-
+#This graphical representation of sales and profit of Sub Category, We can say that Copier has maximum sales and profit and minimum on Labels
